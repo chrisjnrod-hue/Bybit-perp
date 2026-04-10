@@ -1,0 +1,20 @@
+{
+  "name": "bybit-macd-bot",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Bybit MACD flip + MTF alignment bot (WebSocket market data) with REST fallback, persistence and trading",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "demo": "node test/demo.js"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2",
+    "ws": "^8.12.0",
+    "p-queue": "^7.3.0",
+    "uuid": "^9.0.0",
+    "fs-extra": "^11.1.1"
+  }
+}

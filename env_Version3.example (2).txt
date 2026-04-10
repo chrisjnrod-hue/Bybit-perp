@@ -1,0 +1,58 @@
+name=.env.example
+# Bybit credentials (private actions, trading)
+BYBIT_API_KEY=
+BYBIT_API_SECRET=
+
+# Telegram
+TELEGRAM_BOT_TOKEN=
+TELEGRAM_CHAT_ID=
+
+# Environment (mainnet or testnet)
+BYBIT_ENV=mainnet   # or testnet
+DRY_RUN=true        # when true, no real orders are placed (trader logs instead)
+
+# Data / logic
+ROOT_TFS=60,240,D
+MTF_TFS=5,15,60,240,D
+MTF_CHECK_ON_5M=true
+
+# symbol discovery
+WS_INSTRUMENT_TOPIC=instrument_info.100ms
+REST_FALLBACK_IF_WS_FAIL=true
+
+# Exclude bases considered 'stable' (comma-separated)
+STABLE_COINS=USDT,USDC,BUSD,DAI
+
+# Concurrency and rate limiting
+CONCURRENCY=6
+API_MAX_RETRY=3
+WS_RECONNECT_MS=5000
+REST_BATCH_SIZE=6
+REST_BATCH_INTERVAL_MS=200
+
+# Trading controls & money management
+OPEN_TRADES=false
+MAX_OPEN_TRADES=3
+TRADE_LEVERAGE=10
+TAKE_PROFIT_PCT=3
+STOP_LOSS_PCT=2
+BREAKEVEN_PCT=1
+BREAKEVEN_TRIGGER_PCT=0.5
+BREAKEVEN_HIGHER_LOWS=false
+DRY_RUN=true
+
+# Threshold and filters
+MACD_HIST_POSITIVE_THRESHOLD=0.0
+MIN_24H_VOL_CHANGE_PCT=0.0
+MIN_24H_PRICE_CHANGE_PCT=-100  # e.g. allow negative; set a lower bound if you want filter
+
+# Debugging and telemetry
+VERBOSE_LOG=false
+HTTP_PORT=3000
+PUSH_SIGNALS_ON_START=true
+
+# Files
+SIGNALS_FILE=data/signals.json
+
+# Demo symbols (comma separated) - used by test/demo.js
+DEMO_SYMBOLS=BTCUSDT,ETHUSDT,LINKUSDT
